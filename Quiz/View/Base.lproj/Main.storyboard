@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,14 +22,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.3481314833046687" green="0.33225030940708861" blue="0.57292622106832425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysE-yj-99k" userLabel="VerticalStackView">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czF-BZ-vU9" userLabel="QuestionLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="489"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-VW-XnH" userLabel="ChoiceButton1">
+                                        <rect key="frame" x="0.0" y="500.66666666666674" width="393" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="hva-6H-Use"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" red="0.58066201757833202" green="0.6224495549925636" blue="0.96818621134020622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="Choice 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="backgroundImage" image="rectangle" catalog="system" symbolScale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-qQ-kbW" userLabel="ChoiceButton2">
+                                        <rect key="frame" x="0.0" y="590.66666666666663" width="393" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="4hQ-ei-ykN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" red="0.58066201757833202" green="0.6224495549925636" blue="0.96818621134020622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="Choice 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="backgroundImage" image="rectangle" catalog="system" symbolScale="default"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fv-1j-dL4" userLabel="ChoiceButton3">
+                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ume-fK-UsI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" red="0.58066201757833202" green="0.6224495549925636" blue="0.96818621134020622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="Choice 3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="backgroundImage" image="rectangle" catalog="system" symbolScale="default"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nqd-Lb-5OB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4xG-ZD-6hn"/>
+                            <constraint firstItem="ysE-yj-99k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="72M-pi-bgP"/>
                             <constraint firstItem="nqd-Lb-5OB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8jj-Al-w9q"/>
                             <constraint firstItem="nqd-Lb-5OB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZGK-dy-XgY"/>
                             <constraint firstAttribute="bottom" secondItem="nqd-Lb-5OB" secondAttribute="bottom" id="iuy-lJ-bMK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ysE-yj-99k" secondAttribute="trailing" id="pLY-Na-fxd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ysE-yj-99k" secondAttribute="bottom" id="t0H-VT-1Ix"/>
+                            <constraint firstItem="ysE-yj-99k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z0C-NJ-Yjz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +97,7 @@
     </scenes>
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
