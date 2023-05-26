@@ -13,6 +13,7 @@
 		3DEF7D102A2175F000D96A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF7D0E2A2175F000D96A35 /* Main.storyboard */; };
 		3DEF7D122A2175F100D96A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF7D112A2175F100D96A35 /* Assets.xcassets */; };
 		3DEF7D152A2175F100D96A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF7D132A2175F100D96A35 /* LaunchScreen.storyboard */; };
+		3DEF7D202A21779D00D96A35 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF7D1F2A21779D00D96A35 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3DEF7D112A2175F100D96A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DEF7D142A2175F100D96A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DEF7D162A2175F100D96A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DEF7D1F2A21779D00D96A35 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,38 @@
 			children = (
 				3DEF7D082A2175F000D96A35 /* AppDelegate.swift */,
 				3DEF7D0A2A2175F000D96A35 /* SceneDelegate.swift */,
-				3DEF7D0C2A2175F000D96A35 /* ViewController.swift */,
-				3DEF7D0E2A2175F000D96A35 /* Main.storyboard */,
+				3DEF7D1E2A2176B100D96A35 /* Model */,
+				3DEF7D1C2A21768900D96A35 /* View */,
+				3DEF7D1D2A21769700D96A35 /* Controller */,
 				3DEF7D112A2175F100D96A35 /* Assets.xcassets */,
 				3DEF7D132A2175F100D96A35 /* LaunchScreen.storyboard */,
 				3DEF7D162A2175F100D96A35 /* Info.plist */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		3DEF7D1C2A21768900D96A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DEF7D0E2A2175F000D96A35 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DEF7D1D2A21769700D96A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DEF7D0C2A2175F000D96A35 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DEF7D1E2A2176B100D96A35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DEF7D1F2A21779D00D96A35 /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DEF7D0D2A2175F000D96A35 /* ViewController.swift in Sources */,
+				3DEF7D202A21779D00D96A35 /* Question.swift in Sources */,
 				3DEF7D092A2175F000D96A35 /* AppDelegate.swift in Sources */,
 				3DEF7D0B2A2175F000D96A35 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -290,11 +318,12 @@
 				DEVELOPMENT_TEAM = ABCM38598T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +347,12 @@
 				DEVELOPMENT_TEAM = ABCM38598T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
