@@ -44,6 +44,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <imageReference key="backgroundImage" image="rectangle" catalog="system" symbolScale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voG-36-hUE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-qQ-kbW" userLabel="ChoiceButton2">
                                         <rect key="frame" x="0.0" y="590.66666666666663" width="393" height="77"/>
@@ -89,6 +92,12 @@
                             <constraint firstItem="ysE-yj-99k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z0C-NJ-Yjz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choiceButton1" destination="CQw-VW-XnH" id="Nh0-BN-Ipe"/>
+                        <outlet property="choiceButton2" destination="tTS-qQ-kbW" id="aqk-PZ-QOy"/>
+                        <outlet property="choiceButton3" destination="4fv-1j-dL4" id="rbE-nM-eAG"/>
+                        <outlet property="questionLabel" destination="czF-BZ-vU9" id="biS-Gp-Qku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
