@@ -13,22 +13,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var choiceButton2: UIButton!
     @IBOutlet weak var choiceButton3: UIButton!
     
-  
+    var quizLogic = QuizLogic()
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Bring first question
         updateUI()
     }
-
-    func updateUI(){
+    
+    @objc func updateUI(){
         // question choiceButton renewal
+        questionLabel.text = quizLogic.getQuestionText()
+        
+        //setting choices from logic
+        let answerChoices = quizLogic.getAnswers()
+        choiceButton1.setTitle(answerChoices[0], for: .normal)
+        choiceButton2.setTitle(answerChoices[1], for: .normal)
+        choiceButton3.setTitle(answerChoices[2], for: .normal)
+        
+        //resetBackgroundColors
+        choiceButton1.backgroundColor = UIColor.clear
+        choiceButton2.backgroundColor = UIColor.clear
+        choiceButton3.backgroundColor = UIColor.clear
+        
+        
     }
-
+    
     @IBAction func choiceSelected(_ sender: UIButton) {
         //check answer
+        if quizLogic.checkAnswer(sender.currentTitle!){
+            sender.backgroundColor = UIColor.green
+        }else{
+            sender.backgroundColor = UIColor.red
+        }
         
         //next question
+        quizLogic.nextQuestion()
+        
+        //refresh UI to see nextQuestion with timer so observe the backgroundColor change done at top of this function
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
 }
 
