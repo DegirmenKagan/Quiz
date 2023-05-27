@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var choiceButton2: UIButton!
     @IBOutlet weak var choiceButton3: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var quizLogic = QuizLogic()
     var timer = Timer()
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         
         //update progressBar
         progressBar.progress = quizLogic.getProgress()
+        scoreLabel.text = "Score: \(quizLogic.getScore())"
         
     }
     

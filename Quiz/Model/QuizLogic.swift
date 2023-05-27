@@ -23,9 +23,11 @@ struct QuizLogic{
     ]
     
     var questionNumber = 0
+    var score = 0
     
     mutating func checkAnswer(_ userAnswer: String) -> Bool{
         if userAnswer == quiz[questionNumber].correctAnswer{
+            score += 1
             return true
         }else{
             return false
@@ -36,6 +38,7 @@ struct QuizLogic{
         if questionNumber < quiz.count - 1{
             questionNumber += 1
         }else{
+            score = 0
             questionNumber = 0
         }
     }
@@ -50,6 +53,10 @@ struct QuizLogic{
     
     func getProgress() -> Float{
         return Float(questionNumber) / Float(quiz.count)
+    }
+    
+    func getScore() -> Int{
+        return score
     }
     
 }
