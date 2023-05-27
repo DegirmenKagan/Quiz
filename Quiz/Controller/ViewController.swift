@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var choiceButton1: UIButton!
     @IBOutlet weak var choiceButton2: UIButton!
     @IBOutlet weak var choiceButton3: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var quizLogic = QuizLogic()
     var timer = Timer()
@@ -37,6 +38,8 @@ class ViewController: UIViewController {
         choiceButton2.backgroundColor = UIColor.clear
         choiceButton3.backgroundColor = UIColor.clear
         
+        //update progressBar
+        progressBar.progress = quizLogic.getProgress()
         
     }
     

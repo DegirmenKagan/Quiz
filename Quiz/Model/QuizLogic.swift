@@ -48,4 +48,8 @@ struct QuizLogic{
         return quiz[questionNumber].answers
     }
     
+    func getProgress() -> Float{
+        return Float(questionNumber) / Float(quiz.count)
+    }
+    
 }
